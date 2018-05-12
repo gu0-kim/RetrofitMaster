@@ -1,15 +1,10 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.butterknife'
-
+apply plugin: 'com.novoda.bintray-release'
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
         google()
-    }
-
-    dependencies {
-        classpath "com.jakewharton:butterknife-gradle-plugin:" + rootProject.ext.version["butterknifeSdkVersion"]
     }
 }
 
@@ -45,8 +40,7 @@ dependencies {
     implementation rootProject.ext.dependencies["design"]
     debugApi rootProject.ext.dependencies["leakcanary-android"]
     releaseApi rootProject.ext.dependencies["leakcanary-android-no-op"]
-    implementation rootProject.ext.dependencies["butterknife"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
     implementation rootProject.ext.dependencies["dagger"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
 
@@ -55,4 +49,13 @@ dependencies {
 
     implementation rootProject.ext.dependencies["retrofit"]
 
+}
+
+publish {
+    userOrg = 'developergu'//bintray.com用户名
+    groupId = 'com.gu'//jcenter上的路径
+    artifactId = 'mvplibrary'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'A mvp library used easily'//描述，不重要
+    website = 'https://github.com/gu0-kim/RetrofitMaster'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 android {
 
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -27,9 +26,11 @@ android {
     }
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
-    configurations.all {
-        resolutionStrategy.force "com.android.support:support-fragment:27.1.0"
-    }
+//    configurations.all {
+//        resolutionStrategy.force "com.android.support:support-fragment:27.1.0"
+//    }
+
+
 }
 
 dependencies {
