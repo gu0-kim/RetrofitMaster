@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/config_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/back_tb"
+        app:title="配置服务地址"
+        app:titleTextColor="@color/color_white" />
+
+    <com.gu.mvp.widget.ControlTouchableFrameLayout
+        android:id="@+id/touch_control_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="输入服务器地址"
+                android:textColor="@color/grey_tr_900"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/serverEd"
+                    style="@style/editTextStyle"
+                    android:layout_gravity="center_vertical"
+                    android:hint="例如 http://192.168.1.1" />
+
+                <ProgressBar
+                    android:id="@+id/loading_pb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:indeterminateDrawable="@drawable/rotate_pb_bg" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg"
+                android:text="@string/save"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </com.gu.mvp.widget.ControlTouchableFrameLayout>
+</LinearLayout>

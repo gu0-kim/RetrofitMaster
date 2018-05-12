@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RetrofitMaster</string>
+    <string name="post">执行post请求</string>
+    <string name="get">执行get请求</string>
+    <string name="download">下载</string>
+    <string name="upload">上传</string>
+    <string name="test_json">JSON</string>
+    <string name="test_upload">测试上传</string>
+    <string name="test_download">测试下载</string>
+    <string name="test">测试</string>
+    <string name="save">保存</string>
+    <string name="config">配置</string>
+
+</resources>

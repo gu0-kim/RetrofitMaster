@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="btnStyle">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@drawable/btn_bg</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">14sp</item>
+        <!--<item name="android:layout_marginBottom">10dp</item>-->
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Base.ThemeOverlay.AppCompat">
+        <item name="actionMenuTextColor">@color/color_white</item> <!--颜色-->
+        <item name="android:textSize">14sp</item> <!--字体大小-->
+    </style>
+
+    <style name="editTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">#fff</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#29B6F6</color>
+    <!--FF4081-->
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="color_white">#fff</color>
+    <color name="grey_tr_700">#55616161</color>
+    <color name="grey_tr_900">#55212121</color>
+    <color name="pb_deep">#88263238</color>
+    <color name="pb_light">#22263238</color>
+    <color name="yellow_A200">#FFFF00</color>
+    <color name="color_tr">#00000000</color>
+</resources>
