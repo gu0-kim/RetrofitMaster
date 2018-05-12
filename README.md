@@ -42,7 +42,6 @@ app内修改服务器ip地址
 - 上传图片url
 ```
 http://[服务器ip]:8080/server/UploadServlet
-
 ```
 - 下载图片url
 ```
