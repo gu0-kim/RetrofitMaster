@@ -21,7 +21,7 @@ get、post请求以及json解析测试；
 ## 带进度上传图片
 列出assets/uploadfiles目录下图片文件，选中后支持带进度上传。传输结果可在服务端/upload_saved目录下查看。
 
-![image](upoad.gif)
+![image](https://github.com/gu0-kim/RetrofitMaster/blob/master/screen/upload.gif)
 
 ## 带进度下载图片
 先获取服务端图片列表，解析json，在列表中展示缩略图，选中后支持带进度下载。下载结果保存在设备的cache/images目录下
