@@ -36,11 +36,11 @@ public class CleanLeakUtils {
         filedObject = filed.get(inputMethodManager);
         if (filedObject != null && filedObject instanceof View) {
           View fileView = (View) filedObject;
-          if (fileView.getContext() == destContext) { // 被InputMethodManager持有引用的context是想要目标销毁的
-            filed.set(inputMethodManager, null); // 置空，破坏掉path to gc节点
+          if (fileView.getContext() == destContext) {
+            filed.set(inputMethodManager, null);
             Log.e("CleanLeakUtils", "CleanLeakUtils----fixInputMethodManagerLeak: find set null");
           } else {
-            break; // 不是想要目标销毁的，即为又进了另一层界面了，不要处理，避免影响原逻辑,也就不用继续for循环了
+            break;
           }
         }
       } catch (Throwable t) {
@@ -56,7 +56,7 @@ public class CleanLeakUtils {
         field.setAccessible(true);
       }
       field.set(editText, null);
-      Log.e(TAG, "fixEditTextLeak: 成功释放mContext!");
+      Log.e(TAG, "fixEditTextLeak: success release mContext!");
     } catch (Exception e) {
       e.printStackTrace();
     }

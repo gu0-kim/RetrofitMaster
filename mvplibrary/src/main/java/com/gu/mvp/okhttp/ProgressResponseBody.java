@@ -10,7 +10,7 @@ import okio.ForwardingSource;
 import okio.Okio;
 import okio.Source;
 
-/** body带下载进度监听 Created by devel on 2018/5/1. */
+/** ResponseBody with progress. Created by devel on 2018/5/1. */
 public class ProgressResponseBody extends ResponseBody {
   public static final String TAG = ProgressResponseBody.class.getSimpleName();
   private ResponseBody responseBody;

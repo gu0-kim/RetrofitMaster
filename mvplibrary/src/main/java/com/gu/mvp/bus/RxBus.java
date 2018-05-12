@@ -17,7 +17,7 @@ public class RxBus implements Consumer<Throwable> {
   private Map<Consumer<Message>, Disposable> contains;
 
   public RxBus() {
-    Log.e("TAG", "----调用Rxbus构造器，新建rxbus！----");
+    Log.e("TAG", "RxBus: ----create a rxbus!----" );
     mSubject = PublishSubject.create();
     contains = new HashMap<>();
   }

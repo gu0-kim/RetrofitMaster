@@ -26,10 +26,10 @@ public class DimenUtils {
   }
 
   /**
-   * 获取状态栏高度
+   * get status bar height
    *
-   * @param context 上下文
-   * @return 状态栏高度
+   * @param context
+   * @return height
    */
   public static int getStatusBarHeight(Context context) {
     int result = 0;

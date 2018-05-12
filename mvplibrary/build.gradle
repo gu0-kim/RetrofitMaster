@@ -26,6 +26,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 }
 
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation rootProject.ext.dependencies["junit"]

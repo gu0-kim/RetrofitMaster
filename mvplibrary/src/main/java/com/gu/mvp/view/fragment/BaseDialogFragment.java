@@ -135,7 +135,6 @@ public abstract class BaseDialogFragment extends DialogFragment implements IFrag
     data.putString(key, value);
   }
 
-  /*配置window尺寸、背景透明、居中*/
   private void configureWindow() {
     Window window = getDialog().getWindow();
     if (window != null) {

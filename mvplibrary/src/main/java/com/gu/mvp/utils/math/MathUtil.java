@@ -4,13 +4,6 @@ import java.math.BigDecimal;
 
 /** Created by devel on 2018/5/1. */
 public class MathUtil {
-  /**
-   * b转Mb（四舍五入）
-   *
-   * @param size b大小
-   * @param num 保留num位小数
-   * @return string
-   */
   public static String b2Mb(long size, int num) {
     return b2Mb(size, num, "");
   }
