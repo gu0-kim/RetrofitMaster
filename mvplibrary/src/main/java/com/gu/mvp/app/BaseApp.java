@@ -15,6 +15,11 @@ public class BaseApp extends Application {
     return mRefWatcher;
   }
 
+  public void checkItem(Object item) {
+    if (item == null) return;
+    if (mRefWatcher != null) mRefWatcher.watch(item);
+  }
+
   @Override
   public void onCreate() {
     super.onCreate();

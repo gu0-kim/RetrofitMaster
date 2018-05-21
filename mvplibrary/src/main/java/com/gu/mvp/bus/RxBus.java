@@ -17,7 +17,7 @@ public class RxBus implements Consumer<Throwable> {
   private Map<Consumer<Message>, Disposable> contains;
 
   public RxBus() {
-    Log.e("TAG", "RxBus: ----create a rxbus!----" );
+    Log.e("TAG", "RxBus: ----create a rxbus!----");
     mSubject = PublishSubject.create();
     contains = new HashMap<>();
   }
@@ -26,9 +26,21 @@ public class RxBus implements Consumer<Throwable> {
     mSubject.onNext(msg);
   }
 
+  /*注册回调，监听所有消息，需要过滤消息*/
   public synchronized void register(Consumer<Message> onNext) {
     Disposable disposable =
         mSubject.observeOn(AndroidSchedulers.mainThread()).subscribe(onNext, this);
+    if (!contains.containsKey(onNext)) contains.put(onNext, disposable);
+  }
+
+  /*注册回调，只监听指定类型消息*/
+  public synchronized <T extends Message> void register(
+      Consumer<Message> onNext, Class<T> receiveType) {
+    Disposable disposable =
+        mSubject
+            .observeOn(AndroidSchedulers.mainThread())
+            .ofType(receiveType)
+            .subscribe(onNext, this);
     if (!contains.containsKey(onNext)) contains.put(onNext, disposable);
   }
 
