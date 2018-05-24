@@ -51,6 +51,7 @@ public class SquareFrameLayout extends FrameLayout {
               : MeasureSpec.getSize(heightMeasureSpec);
       ViewGroup.LayoutParams params = getLayoutParams();
       params.height = squareSize;
+      params.width = squareSize;
       setLayoutParams(params);
       setMeasuredDimension(squareSize, squareSize);
       measureChildren(
