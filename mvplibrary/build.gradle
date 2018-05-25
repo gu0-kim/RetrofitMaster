@@ -55,7 +55,7 @@ publish {
     userOrg = 'developergu'//bintray.com用户名
     groupId = 'com.gu'//jcenter上的路径
     artifactId = 'mvplibrary'//项目名称
-    publishVersion = '1.0.4'//版本号
+    publishVersion = '1.0.5'//版本号
     desc = 'A mvp library used easily'//描述，不重要
     website = 'https://github.com/gu0-kim/RetrofitMaster'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
